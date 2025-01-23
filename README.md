@@ -1,57 +1,58 @@
-# SMM Expert with AI
+```markdown
+# SMM Эксперт с ИИ
 
-This project is a Python-based application that automates the work of an SMM specialist using artificial intelligence. The application helps in generating posts, images, scheduling publications, and retrieving statistics from social networks like VKontakte.
+Этот проект представляет собой Python-приложение, которое автоматизирует работу SMM-специалиста с использованием искусственного интеллекта. Приложение помогает в генерации постов, изображений, планировании публикаций и сборе статистики из социальных сетей, таких как ВКонтакте.
 
-## Features
-- **Post Generation**: Automatically generates text posts on given topics and in specified tones using the OpenAI API.
-- **Image Generation**: Generates images based on the context of the post using the OpenAI API (DALL-E).
-- **Auto-Publication**: Supports scheduling and automatic posting to VKontakte.
-- **Statistics**: Retrieves and displays engagement statistics (views, likes, followers, etc.) from VKontakte.
+## Возможности
+- **Генерация постов**: Автоматически создает текстовые посты на заданные темы в определенном стиле с использованием OpenAI API.
+- **Генерация изображений**: Создает изображения на основе контекста поста с помощью OpenAI API (DALL-E).
+- **Автопубликация**: Поддерживает планирование и автоматическую публикацию во ВКонтакте.
+- **Статистика**: Собирает и отображает статистику вовлеченности (просмотры, лайки, подписчики и т.д.) из ВКонтакте.
 
-## Technologies Used
-- **Python**: Core programming language.
-- **Flask**: Web framework for building the application's frontend.
-- **OpenAI API**: Used for generating text and images.
-- **VK API**: Used for publishing posts and retrieving statistics from VKontakte.
-- **SQLAlchemy**: ORM for managing the database.
-- **Bootstrap**: Used for styling the frontend.
+## Используемые технологии
+- **Python**: Основной язык программирования.
+- **Flask**: Веб-фреймворк для создания интерфейса приложения.
+- **OpenAI API**: Используется для генерации текста и изображений.
+- **VK API**: Для публикации постов и сбора статистики из ВКонтакте.
+- **SQLAlchemy**: ORM для работы с базой данных.
+- **Bootstrap**: Используется для стилизации интерфейса.
 
-## Project Setup
+## Настройка проекта
 
-1. **Clone the repository:**
+1. **Клонируйте репозиторий:**
    ```bash
    git clone https://github.com/username/smm-expert-ai.git
    cd smm-expert-ai
    ```
 
-2. **Install dependencies:**
-   It's recommended to use a virtual environment:
+2. **Установите зависимости:**
+   Рекомендуется использовать виртуальное окружение:
    ```bash
    python3 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
    ```
 
-3. **Set up environment variables:**
-   Create a `.env` file and add your OpenAI and VKontakte API keys:
+3. **Настройте переменные окружения:**
+   Создайте файл `.env` и добавьте API-ключи OpenAI и ВКонтакте:
    ```bash
-   OPENAI_API_KEY=<your_openai_api_key>
-   VK_API_KEY=<your_vk_api_key>
-   VK_GROUP_ID=<your_vk_group_id>
+   OPENAI_API_KEY=<ваш_openai_api_ключ>
+   VK_API_KEY=<ваш_vk_api_ключ>
+   VK_GROUP_ID=<идентификатор_группы_vk>
    ```
 
-4. **Run the application:**
+4. **Запустите приложение:**
    ```bash
    flask run
    ```
 
-## Key Modules
-- `generators/text_gen.py`: Handles text generation using OpenAI.
-- `generators/image_gen.py`: Handles image generation using OpenAI.
-- `social_publishers/vk_publisher.py`: Manages interaction with VKontakte API for posting.
-- `social_stats/vk_stats.py`: Retrieves and processes VKontakte statistics.
+## Основные модули
+- `generators/text_gen.py`: Генерация текста через OpenAI.
+- `generators/image_gen.py`: Генерация изображений через OpenAI.
+- `social_publishers/vk_publisher.py`: Работа с API ВКонтакте для публикаций.
+- `social_stats/vk_stats.py`: Сбор статистики из ВКонтакте.
 
-## Project Structure
+## Структура проекта
 ```
 smm-expert-ai/
 │
@@ -75,12 +76,13 @@ smm-expert-ai/
 └── README.md
 ```
 
-## How It Works
+## Принцип работы
 
-1. **Post Generation**: The user inputs a topic and tone, and the application generates a post using OpenAI's GPT model.
-2. **Image Generation**: A description of the image is generated based on the post, and the image is created using the OpenAI image generation API.
-3. **Publishing**: The post and image are automatically published to VKontakte.
-4. **Statistics**: The app retrieves VK statistics (followers, likes, etc.) and displays them.
+1. **Генерация поста**: Пользователь вводит тему и стиль, приложение генерирует пост через GPT.
+2. **Создание изображения**: На основе поста генерируется описание изображения, которое создается через OpenAI API.
+3. **Публикация**: Пост и изображение автоматически публикуются во ВКонтакте.
+4. **Статистика**: Приложение собирает статистику (подписчики, лайки и т.д.) и отображает ее.
 
-## License
-This project is licensed under the MIT License.
+## Лицензия
+Проект распространяется под лицензией MIT.
+```
